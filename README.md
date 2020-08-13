@@ -7,3 +7,6 @@ After finishing tutorial will use structure of this project to create 5 terrible
 3. CatFight: Simple kitty fighting game.
 4. NyanNyan: An infinite runner platformer.
 5. League of Litter: Top down ARPG.
+
+# Getting SDL 2 running on Windows with Visual Studio
+https://www.youtube.com/watch?v=Sfn7yOiwJLw
