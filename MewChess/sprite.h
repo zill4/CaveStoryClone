@@ -10,7 +10,9 @@
 
 class Graphics;
 
-class Sprite {
+class Sprite 
+{
+
 public:
 	Sprite();
 	Sprite(Graphics& graphics, const std::string& filePath, int sourceX, int sourceY, int width, int height, float posX, float posY);

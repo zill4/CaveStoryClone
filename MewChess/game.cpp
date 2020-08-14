@@ -7,7 +7,8 @@
 #include "graphics.h"
 #include "input.h"
 
-namespace {
+namespace 
+{
 	const int FPS = 50;
 	const int MAX_FRAME_TIME = 5 * 1000 / FPS;
 }
@@ -31,7 +32,7 @@ void Game::gameLoop()
 	SDL_Event event;
 
 	// Draws sprite to screen.
-	this->_player = Sprite(graphics, "..\\MyChar.png",0,0, 16, 16, 100, 100);
+	this->_player = Sprite(graphics, "C:\\Users\\justc\\source\\repos\\MewChess\\MewChess\\Content\\sprites\\MyChar.png",0,0, 16, 16, 100, 100);
 
 	// Gets number of seconds since SDL init
 	int LAST_UPDATE_TIME = SDL_GetTicks();

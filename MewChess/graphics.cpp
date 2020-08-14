@@ -3,13 +3,16 @@
 	Holds all information dealing with graphics for the game.
 */
 #include "graphics.h"
+#include "globals.h"
 
-Graphics::Graphics() {
-	SDL_CreateWindowAndRenderer(640, 480, 0, &this->_window, &this->_renderer);
+Graphics::Graphics() 
+{
+	SDL_CreateWindowAndRenderer(globals::SCREEN_WIDTH, globals::SCREEN_HEIGHT, 0, &this->_window, &this->_renderer);
 	SDL_SetWindowTitle(this->_window, "Cavestory");
 }
 
-Graphics::~Graphics() {
+Graphics::~Graphics() 
+{
 	SDL_DestroyWindow(this->_window);
 
 }

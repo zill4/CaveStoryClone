@@ -4,7 +4,8 @@
 #include <SDL.h>
 #include <map>
 
-class Input {
+class Input 
+{
 
 public:
 	void beginNewFrame();

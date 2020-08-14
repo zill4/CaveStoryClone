@@ -1,4 +1,5 @@
 #include "sprite.h"
+#include "globals.h"
 
 Sprite::Sprite() {}
 
@@ -21,7 +22,8 @@ Sprite::~Sprite() {}
 void Sprite::draw(Graphics& graphics, int x, int y)
 {
 	// our destination recetangle needed by Blitz, where on the screen we draw.
-	SDL_Rect destinationRectangle = { x, y, this->_sourceRect.w, this->_sourceRect.h };
+	// Need to modify to scale by to (take twice is much space)
+	SDL_Rect destinationRectangle = { x, y, this->_sourceRect.w * globals::SPRITE_SCALE, this->_sourceRect.h * globals::SPRITE_SCALE};
 
 	// Spritesheet our texture, a pointer to the source, and the destination rectangle for drawing.
 	graphics.blitSurface(this->_spriteSheet, &this->_sourceRect, &destinationRectangle);

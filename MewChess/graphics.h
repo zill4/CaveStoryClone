@@ -8,7 +8,8 @@
 struct SDL_Window;
 struct SDL_Renderer;
 
-class Graphics {
+class Graphics 
+{
 
 public: 
 	Graphics();
