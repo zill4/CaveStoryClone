@@ -2,6 +2,7 @@
 #define GAME_H
 #include <SDL.h>
 #include <algorithm>
+#include "sprite.h"
 
 class Graphics;
 
@@ -13,5 +14,7 @@ private:
 	void gameLoop();
 	void draw(Graphics& graphics);
 	void update(float elapsedTime);
+
+	Sprite _player;
 };
 #endif

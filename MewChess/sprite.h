@@ -4,8 +4,10 @@
 #define SPRITE_H
 #include <SDL.h>
 #include <string>
+#include "graphics.h"
 
 // forward declaration
+
 class Graphics;
 
 class Sprite {

@@ -1,11 +1,7 @@
 ﻿  game.cpp
-C:\Users\justc\source\repos\MewChess\MewChess\game.cpp(68,24): warning C4244: 'argument': conversion from 'const _Ty' to 'float', possible loss of data
+C:\Users\justc\source\repos\MewChess\MewChess\game.cpp(71,24): warning C4244: 'argument': conversion from 'const _Ty' to 'float', possible loss of data
           with
           [
               _Ty=int
           ]
-  graphics.cpp
-  input.cpp
-  main.cpp
-  Generating Code...
   MewChess.vcxproj -> C:\Users\justc\source\repos\MewChess\Debug\MewChess.exe

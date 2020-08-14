@@ -30,6 +30,9 @@ void Game::gameLoop()
 	Input input;
 	SDL_Event event;
 
+	// Draws sprite to screen.
+	this->_player = Sprite(graphics, "..\\MyChar.png",0,0, 16, 16, 100, 100);
+
 	// Gets number of seconds since SDL init
 	int LAST_UPDATE_TIME = SDL_GetTicks();
 	// Start game loop
@@ -67,12 +70,19 @@ void Game::gameLoop()
 		int ELAPSED_TIME_MS = CURRENT_TIME_MS - LAST_UPDATE_TIME;
 		this->update(std::min(ELAPSED_TIME_MS, MAX_FRAME_TIME));
 		LAST_UPDATE_TIME = CURRENT_TIME_MS;
+
+		this->draw(graphics);
 	}
 }
 
 void Game::draw(Graphics& graphics)
 {
+	// Clear whatever is in renderer
+	graphics.clear();
 
+	this->_player.draw(graphics, 100, 100);
+
+	graphics.flip();
 }
 
 void Game::update(float elapsedTime)
