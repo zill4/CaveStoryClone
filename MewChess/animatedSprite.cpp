@@ -7,7 +7,6 @@
 
 AnimatedSprite::AnimatedSprite() {}
 
-//	AnimatedSprite(Graphics& graphics, const std::string& filePath, int sourceX, int sourceY, int width, int height, float posX, float posY, float timeToUpdate);
 
 AnimatedSprite::AnimatedSprite(Graphics& graphics, const std::string& filePath, int sourceX, int sourceY, int width, int height, float posX, float posY, float timeToUpdate) : 
 	Sprite(graphics, filePath, sourceX, sourceY, width, height, posX, posY),
@@ -15,7 +14,9 @@ AnimatedSprite::AnimatedSprite(Graphics& graphics, const std::string& filePath, 
 	_timeToUpdate(timeToUpdate),
 	_visible(true),
 	_currentAnimationOnce(false),
-	_currentAnimation("") {} 
+	_currentAnimation(""),
+	_timeElapsed(0)
+{} 
 
 void AnimatedSprite::addAnimation(int frames, int x, int y, std::string name, int width, int height, Vector2 offset)
 {
@@ -100,5 +101,6 @@ void AnimatedSprite::animationDone(std::string currentAnimation)
 
 void AnimatedSprite::setupAnimations()
 {
+	// Running left animation, height width, with no offset.
 	this->addAnimation(3, 0, 0, "RunLeft", 16, 16, Vector2(0,0));
 }

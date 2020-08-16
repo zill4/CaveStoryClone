@@ -1,20 +1,5 @@
 ﻿  animatedSprite.cpp
-C:\Users\justc\source\repos\MewChess\MewChess\animatedSprite.cpp(12,162): error C2511: 'AnimatedSprite::AnimatedSprite(Graphics &,const std::string &,int,int,int,int,float,float)': overloaded member function not found in 'AnimatedSprite'
-C:\Users\justc\source\repos\MewChess\MewChess\animatedSprite.h(17): message : see declaration of 'AnimatedSprite'
-C:\Users\justc\source\repos\MewChess\MewChess\animatedSprite.cpp(13,62): error C2065: 'posX': undeclared identifier
-C:\Users\justc\source\repos\MewChess\MewChess\animatedSprite.cpp(18,24): error C2550: 'AnimatedSprite::{ctor}': constructor initializer lists are only allowed on constructor definitions
-  game.cpp
-C:\Users\justc\source\repos\MewChess\MewChess\game.cpp(72,24): warning C4244: 'argument': conversion from 'const _Ty' to 'float', possible loss of data
-          with
-          [
-              _Ty=int
-          ]
-  graphics.cpp
-  input.cpp
-  main.cpp
-  sprite.cpp
-C:\Users\justc\source\repos\MewChess\MewChess\sprite.cpp(26,62): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\justc\source\repos\MewChess\MewChess\sprite.cpp(26,62): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\justc\source\repos\MewChess\MewChess\sprite.cpp(26,107): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\justc\source\repos\MewChess\MewChess\sprite.cpp(26,107): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-  Generating Code...
+C:\Users\justc\source\repos\MewChess\MewChess\animatedSprite.cpp(70,25): warning C4018: '<': signed/unsigned mismatch
+C:\Users\justc\source\repos\MewChess\MewChess\animatedSprite.cpp(89,47): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\justc\source\repos\MewChess\MewChess\animatedSprite.cpp(90,47): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  MewChess.vcxproj -> C:\Users\justc\source\repos\MewChess\Debug\MewChess.exe
