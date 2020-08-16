@@ -14,16 +14,15 @@ AnimatedSprite::AnimatedSprite(Graphics& graphics, const std::string& filePath, 
 	_timeToUpdate(timeToUpdate),
 	_visible(true),
 	_currentAnimationOnce(false),
-	_currentAnimation(""),
-	_timeElapsed(0)
+	_currentAnimation("")
 {} 
 
 void AnimatedSprite::addAnimation(int frames, int x, int y, std::string name, int width, int height, Vector2 offset)
 {
 	std::vector<SDL_Rect> rectangles;
-	for (int sprite = 0; sprite < frames; sprite++)
+	for (int i = 0; i < frames; i++)
 	{
-		SDL_Rect newRect = { (sprite + x) * width, y, width, height };
+		SDL_Rect newRect = { (i + x) * width, y, width, height };
 		rectangles.push_back(newRect);
 	}
 	this->_animations.insert(std::pair<std::string, std::vector<SDL_Rect>>(name, rectangles));
@@ -68,12 +67,16 @@ void AnimatedSprite::update(int elapsedTime)
 	{
 		// If we are not at the last frame, increase to next frame
 		if (this->_frameIndex < this->_animations[this->_currentAnimation].size() - 1)
+		{
 			this->_frameIndex++;
+		}
 		else
 		{
 			//Else go back to the first frame
 			if (this->_currentAnimationOnce == true)
+			{
 				this->setVisible(false);
+			}
 			this->_frameIndex = 0;
 			this->animationDone(this->_currentAnimation);
 		}
@@ -82,16 +85,18 @@ void AnimatedSprite::update(int elapsedTime)
 
 void AnimatedSprite::draw(Graphics& graphics, int x, int y)
 {
-	SDL_Rect destinationRectangle;
-	destinationRectangle.x = x + this->_offsets[this->_currentAnimation].x;
-	destinationRectangle.y = y + this->_offsets[this->_currentAnimation].y;
-	// May need accessor for the source rectangle
-	destinationRectangle.w = this->_sourceRect.w * globals::SPRITE_SCALE;
-	destinationRectangle.h = this->_sourceRect.h * globals::SPRITE_SCALE;
-
-	SDL_Rect sourceRect = this->_animations[this->_currentAnimation][this->_frameIndex];
-	// Also not accessible
-	graphics.blitSurface(this->_spriteSheet, &sourceRect, &destinationRectangle);
+	if (this->_visible)
+	{
+		SDL_Rect destinationRectangle;
+		destinationRectangle.x = x + this->_offsets[this->_currentAnimation].x;
+		destinationRectangle.y = y + this->_offsets[this->_currentAnimation].y;
+		// May need accessor for the source rectangle
+		destinationRectangle.w = this->_sourceRect.w * globals::SPRITE_SCALE;
+		destinationRectangle.h = this->_sourceRect.h * globals::SPRITE_SCALE;
+		SDL_Rect sourceRect = this->_animations[this->_currentAnimation][this->_frameIndex];
+		// Also not accessible
+		graphics.blitSurface(this->_spriteSheet, &sourceRect, &destinationRectangle);
+	}
 }
 
 void AnimatedSprite::animationDone(std::string currentAnimation)

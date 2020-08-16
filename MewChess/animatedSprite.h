@@ -60,7 +60,7 @@ private:
 	// Which frame in animation
 	int _frameIndex;
 	// Time elapsed where we are at
-	double _timeElapsed;
+	double _timeElapsed = 0;
 	// If animation is visible.
 	bool _visible;
 

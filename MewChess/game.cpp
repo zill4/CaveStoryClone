@@ -32,7 +32,8 @@ void Game::gameLoop()
 	SDL_Event event;
 
 	// Draws sprite to screen. last variable is time to update
-	this->_player = AnimatedSprite(graphics, "C:\\Users\\justc\\source\\repos\\MewChess\\MewChess\\Content\\sprites\\MyChar.png",0,0, 16, 16, 100, 100, 100);
+	this->_player = AnimatedSprite(graphics, "C:\\Users\\justc\\source\\repos\\MewChess\\MewChess\\Content\\sprites\\MyChar.png",0, 0, 16, 16, 100, 100, 100);
+	this->_player.setupAnimations();
 	// Play the first animation when the game starts.
 	this->_player.playAnimation("RunLeft");
 	// Gets number of seconds since SDL init

@@ -1,5 +1,8 @@
-﻿  animatedSprite.cpp
-C:\Users\justc\source\repos\MewChess\MewChess\animatedSprite.cpp(70,25): warning C4018: '<': signed/unsigned mismatch
-C:\Users\justc\source\repos\MewChess\MewChess\animatedSprite.cpp(89,47): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\justc\source\repos\MewChess\MewChess\animatedSprite.cpp(90,47): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+﻿  game.cpp
+C:\Users\justc\source\repos\MewChess\MewChess\game.cpp(74,24): warning C4244: 'argument': conversion from 'const _Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\justc\source\repos\MewChess\MewChess\game.cpp(94,23): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   MewChess.vcxproj -> C:\Users\justc\source\repos\MewChess\Debug\MewChess.exe
